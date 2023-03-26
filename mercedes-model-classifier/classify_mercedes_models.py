@@ -1,7 +1,6 @@
 """
 model used: ResNet 18
 model pretrained in Kaggle Kernel
-dataset path: ./Custom Search API/car_model_images/mercedes_models_images
 dataset link: https://www.kaggle.com/datasets/benlaw/mercedes-models-v2
 """
 
