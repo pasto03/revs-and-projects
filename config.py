@@ -7,10 +7,13 @@ device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 model_path = 'mercedes-model-params.model'
 
 # change to the path where you downloaded the original dataset
-dataset_path = r"C:\Users\User\PycharmProjects\helloasus\Additional tools\Google functions\Custom Search API\car_model_images\mercedes_models_images"
+dataset_path = 'datasets/train_images'
 
 # obtain the map after data preprocessing(check kaggle kernel)
 inverse_target_map = pickle.load(open('inverse_target_map.pkl', 'rb'))
+
+# num_classes for model is the size of target
+num_models = len(inverse_target_map)
 
 if __name__ == '__main__':
     # print(torch.__version__)

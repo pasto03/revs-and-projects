@@ -66,5 +66,7 @@ class ResNet18(nn.Module):
         return F.log_softmax(out, dim=-1)
 
 
-classifier = ResNet18(BasicBlock, num_classes=46).to(config.device)
+classifier = ResNet18(BasicBlock, num_classes=config.num_models).to(config.device)
+
+# load pretrained dataset
 classifier.load_state_dict(torch.load(config.model_path))

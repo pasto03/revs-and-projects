@@ -27,9 +27,18 @@ transforms = transforms.Compose(
 
 class MercedesClassifier:
     def __init__(self):
+        # inverse map is created in image processing
         self.inverse_map = config.inverse_target_map
 
     def show_image_by_index(self, index, as_cache=True):
+        """
+        show image of a mercedes model for its corresponding index,
+        index corresponding to the inverse_map
+        eg. show_image_by_index(1) -> {1: '...cla-01.png', ...} -> read '...cla-01.png'
+        :param index: int, index number corresponding to inverse map
+        :param as_cache: bool, if true then function will return PIL.Image object instead of showing the image
+        :return:
+        """
         model_images_paths = os.listdir(config.dataset_path)
         model_name = self.inverse_map[index]
         selected_model_images_paths = [path for path in model_images_paths if path.startswith(model_name)]
@@ -60,6 +69,11 @@ class MercedesClassifier:
         return img_tensor
 
     def classify(self, image_path):
+        """
+        classify image model name, given image_path
+        :param image_path: str, path of the model image
+        :return: predicted_model_name, pred_index; returns the predicted model name and its index
+        """
         classifier.eval()
         with torch.no_grad():
             # input and model should have same device
@@ -77,13 +91,15 @@ class MercedesClassifier:
 
 if __name__ == '__main__':
     model_classifier = MercedesClassifier()
-    # choose random image in dataset
+    # can insert any mercedes model image path, but ensure that image has 3 channels
     # img_path = 'car_model_collection/test_model_images/mercedes-benz/amg-cls4.jpeg'
 
-    eval_dataset_path = 'car_model_collection/test_model_images/mercedes-benz'
+    # choose random image in dataset
+    eval_dataset_path = 'datasets/test_images'
     img_paths = [os.path.join(eval_dataset_path, filename) for filename in os.listdir(eval_dataset_path)]
     img_path = random.choice(img_paths)
-    print(img_path)
+    # print(img_path)
+    # model prediction results
     pred_model_name, pred_index = model_classifier.classify(img_path)
 
     # compare input image and predicted model image
