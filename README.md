@@ -27,5 +27,7 @@ Dataset is included in this repo, but I have created a dataset in Kaggle. <a hre
 The image on the left is our input; the image on the right is one of the model image for the model's predicted output.
 
 For example, in <i>Figure 1</i> we inputed a <b>g-class model</b> image, and the model predicted the image as an <b>amg-cls model</b>.
+
 <br>
+
 The output in this model is not ideal enough, but it is a simple trial to verify my AI self-learning process.
