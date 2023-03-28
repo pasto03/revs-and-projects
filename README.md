@@ -3,7 +3,7 @@ A collection of revisions and simple projects in self-learning process
 
 ## Project: mercedes-model-classifier
 
-<img src="mercedes-model-classifier\datasets\train_images\mercedes-benz amg-cls-8.png" alt="a mercedes model image" width=80% height=80%>
+<img src="Projects/mercedes-model-classifier\datasets\train_images\mercedes-benz amg-cls-8.png" alt="a mercedes model image" width=80% height=80%>
 
 ## What does the model do?
 
@@ -14,13 +14,13 @@ Dataset is included in this repo, but I have created a dataset in Kaggle. <a hre
 
 ## Example of Use:
 <br>
-<img src="mercedes-model-classifier\output-example1.png" alt="example1 for model usage" width=80% height=80%>
+<img src="Projects/mercedes-model-classifier\output-example1.png" alt="example1 for model usage" width=80% height=80%>
 <br>
 <i>Figure 1 output-example1.png</i>
 
 <br>
 
-<img src="mercedes-model-classifier\output-example2.png" alt="example2 for model usage" width=80% height=80%>
+<img src="Projects/mercedes-model-classifier\output-example2.png" alt="example2 for model usage" width=80% height=80%>
 <br>
 <i>Figure 2 output-example2.png</i>
 <br>
